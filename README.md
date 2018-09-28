@@ -1,0 +1,1 @@
+These are functions that remove and return sections of the array.
