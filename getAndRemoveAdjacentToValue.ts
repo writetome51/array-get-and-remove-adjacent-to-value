@@ -2,7 +2,7 @@ import { IAdjacentToValueInfo }
 	from '@writetome51/adjacent-to-value-info-interface/IAdjacentToValueInfo';
 import { getFirstIndexOf } from '@writetome51/array-get-indexes-basic/getFirstIndexOf';
 import { getAndRemoveAdjacentAt } 
-	from '@writetome51/array-get-and-removers-basic/getAndRemoveAdjacentAt';
+	from '@writetome51/array-get-and-remove-adjacent-at/getAndRemoveAdjacentAt';
 import { ifIndexNotNegative_getActionResult } 
 	from '@writetome51/array-and-index-validation/ifIndexNotNegative_getActionResult';
 import { errorIfIndexNotValidAfterOffsetWasAdded } 

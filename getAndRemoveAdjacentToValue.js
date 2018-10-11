@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 var getFirstIndexOf_1 = require("@writetome51/array-get-indexes-basic/getFirstIndexOf");
-var getAndRemoveAdjacentAt_1 = require("@writetome51/array-get-and-removers-basic/getAndRemoveAdjacentAt");
+var getAndRemoveAdjacentAt_1 = require("@writetome51/array-get-and-remove-adjacent-at/getAndRemoveAdjacentAt");
 var ifIndexNotNegative_getActionResult_1 = require("@writetome51/array-and-index-validation/ifIndexNotNegative_getActionResult");
 var errorIfIndexNotValidAfterOffsetWasAdded_1 = require("@writetome51/array-and-index-validation/errorIf/errorIfIndexNotValidAfterOffsetWasAdded");
 // Removes and returns adjacent items from passed array, starting with, or
