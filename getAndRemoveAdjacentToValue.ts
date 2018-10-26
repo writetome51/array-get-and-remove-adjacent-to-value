@@ -1,6 +1,6 @@
 import { IAdjacentToValueInfo }
 	from '@writetome51/adjacent-to-value-info-interface/IAdjacentToValueInfo';
-import { getFirstIndexOf } from '@writetome51/array-get-indexes-basic/getFirstIndexOf';
+import { getFirstIndexOf } from '@writetome51/array-get-indexes-basic';
 import { getAndRemoveAdjacentAt } 
 	from '@writetome51/array-get-and-remove-adjacent-at/getAndRemoveAdjacentAt';
 import { ifIndexNotNegative_getActionResult } 

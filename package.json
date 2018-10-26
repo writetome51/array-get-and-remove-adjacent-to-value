@@ -1,10 +1,14 @@
 {
   "name": "@writetome51/array-get-and-remove-adjacent-to-value",
-  "version": "1.0.1",
-  "description": "functions that remove and return sections of the array",
+  "version": "1.0.2",
+  "description": "Function that removes and returns section of the array",
   "main": "",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/writetome51/array-get-and-remove-adjacent-to-value.git"
   },
   "keywords": [
     "array",
@@ -15,6 +19,10 @@
   ],
   "author": "Steve Thompson",
   "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/writetome51/array-get-and-remove-adjacent-to-value/issues"
+  },
+  "homepage": "https://github.com/writetome51/array-get-and-remove-adjacent-to-value#readme",
   "dependencies": {
     "@writetome51/adjacent-to-value-info-interface": "latest",
     "@writetome51/array-get-indexes-basic": "latest",

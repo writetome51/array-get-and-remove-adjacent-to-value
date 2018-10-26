@@ -1,3 +1,8 @@
+To include in your project:
+
+import {getAndRemoveAdjacentToValue} from 
+'@writetome51/array-get-and-remove-adjacent-to-value/getAndRemoveAdjacentToValue';
+
 
 getAndRemoveAdjacentToValue(info, arrayToModify);
 
