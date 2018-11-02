@@ -1,6 +1,6 @@
 {
   "name": "@writetome51/array-get-and-remove-adjacent-to-value",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Function that removes and returns section of the array",
   "main": "",
   "scripts": {
@@ -24,6 +24,7 @@
   },
   "homepage": "https://github.com/writetome51/array-get-and-remove-adjacent-to-value#readme",
   "dependencies": {
+    "basic-data-handling": "latest",
     "@writetome51/adjacent-to-value-info-interface": "latest",
     "@writetome51/array-get-indexes-basic": "latest",
     "@writetome51/array-get-and-remove-adjacent-at": "latest",

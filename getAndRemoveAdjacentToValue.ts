@@ -1,11 +1,12 @@
+import { errorIfNotInteger } from 'basic-data-handling/errorIfNotInteger';
 import { IAdjacentToValueInfo }
 	from '@writetome51/adjacent-to-value-info-interface/IAdjacentToValueInfo';
 import { getFirstIndexOf } from '@writetome51/array-get-indexes-basic';
-import { getAndRemoveAdjacentAt } 
+import { getAndRemoveAdjacentAt }
 	from '@writetome51/array-get-and-remove-adjacent-at/getAndRemoveAdjacentAt';
-import { ifIndexNotNegative_getActionResult } 
+import { ifIndexNotNegative_getActionResult }
 	from '@writetome51/array-and-index-validation/ifIndexNotNegative_getActionResult';
-import { errorIfIndexNotValidAfterOffsetWasAdded } 
+import { errorIfIndexNotValidAfterOffsetWasAdded }
 	from '@writetome51/array-and-index-validation/errorIf/errorIfIndexNotValidAfterOffsetWasAdded';
 
 
@@ -23,6 +24,7 @@ import { errorIfIndexNotValidAfterOffsetWasAdded }
 
 export function getAndRemoveAdjacentToValue(info: IAdjacentToValueInfo, array): any[] {
 	let index = getFirstIndexOf(info.value, array);
+	errorIfNotInteger(info.offset);
 	return ifIndexNotNegative_getActionResult(index, () => {
 		index += info.offset;
 
