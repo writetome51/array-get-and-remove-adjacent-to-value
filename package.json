@@ -1,8 +1,8 @@
 {
   "name": "@writetome51/array-get-and-remove-adjacent-to-value",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Function that removes and returns section of the array",
-  "main": "",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
