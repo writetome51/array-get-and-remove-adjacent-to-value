@@ -2,7 +2,7 @@ To include in your project:
 
 import {getAndRemoveAdjacentToValue} from '@writetome51/array-get-and-remove-adjacent-to-value';
 
-getAndRemoveAdjacentToValue(info, arrayToModify);
+getAndRemoveAdjacentToValue(info, arrayToModify): any[]
 
 info = {value: anyExceptObject, offset: integer, howMany: integer greater than zero}
 
