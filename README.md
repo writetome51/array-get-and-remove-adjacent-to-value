@@ -1,10 +1,10 @@
 To include in your project:
 
-import {getAndRemoveAdjacentToValue} from 
-'@writetome51/array-get-and-remove-adjacent-to-value/getAndRemoveAdjacentToValue';
-
+import {getAndRemoveAdjacentToValue} from '@writetome51/array-get-and-remove-adjacent-to-value';
 
 getAndRemoveAdjacentToValue(info, arrayToModify);
+
+info = {value: anyExceptObject, offset: integer, howMany: integer greater than zero}
 
 Removes and returns adjacent items from passed arrayToModify, starting with, or
 close to, info.value.
