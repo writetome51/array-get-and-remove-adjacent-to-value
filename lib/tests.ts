@@ -1,4 +1,4 @@
-import { getAndRemoveAdjacentToValue } from './getAndRemoveAdjacentToValue';
+import { getAndRemoveAdjacentToValue } from './index';
 
 
 let arrayToModify = [1, 3, 5, 7, 9, 11, 13, 15, 17];

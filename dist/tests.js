@@ -1,8 +1,8 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-var getAndRemoveAdjacentToValue_1 = require("./getAndRemoveAdjacentToValue");
+var index_1 = require("./index");
 var arrayToModify = [1, 3, 5, 7, 9, 11, 13, 15, 17];
-var result = getAndRemoveAdjacentToValue_1.getAndRemoveAdjacentToValue({
+var result = index_1.getAndRemoveAdjacentToValue({
     value: 7,
     offset: 0,
     howMany: 3
@@ -18,7 +18,7 @@ if (arrayToModify.length === 6 && arrayToModify[3] === 13 && arrayToModify[5] ==
 else
     console.log('test 2 failed');
 arrayToModify = [1, 3, 5, 7, 9, 11, 13, 15, 17];
-result = getAndRemoveAdjacentToValue_1.getAndRemoveAdjacentToValue({ value: 13, offset: -2, howMany: 4 }, arrayToModify);
+result = index_1.getAndRemoveAdjacentToValue({ value: 13, offset: -2, howMany: 4 }, arrayToModify);
 if (result.length === 4 && result[0] === 9 && result[3] === 15)
     console.log('test 3 passed');
 else
@@ -27,7 +27,7 @@ if (arrayToModify.length === 5 && arrayToModify[0] === 1 && arrayToModify[4] ===
     console.log('test 4 passed');
 var errorTriggered = false;
 try {
-    result = getAndRemoveAdjacentToValue_1.getAndRemoveAdjacentToValue({ value: 1, offset: 0, howMany: 0 }, // howMany cannot be zero
+    result = index_1.getAndRemoveAdjacentToValue({ value: 1, offset: 0, howMany: 0 }, // howMany cannot be zero
     arrayToModify);
 }
 catch (e) {
@@ -39,7 +39,7 @@ else
     console.log('test 5 failed');
 errorTriggered = false;
 try {
-    result = getAndRemoveAdjacentToValue_1.getAndRemoveAdjacentToValue(
+    result = index_1.getAndRemoveAdjacentToValue(
     // 1 is first item in array, so offset -1 is impossible:
     { value: 1, offset: -1, howMany: 2 }, arrayToModify);
 }
@@ -52,7 +52,7 @@ else
     console.log('test 6 failed');
 errorTriggered = false;
 try {
-    result = getAndRemoveAdjacentToValue_1.getAndRemoveAdjacentToValue({ value: 1, offset: 0, howMany: 6 }, arrayToModify);
+    result = index_1.getAndRemoveAdjacentToValue({ value: 1, offset: 0, howMany: 6 }, arrayToModify);
 }
 catch (e) {
     errorTriggered = true;
@@ -63,7 +63,7 @@ else
     console.log('test 7 failed');
 errorTriggered = false;
 try {
-    result = getAndRemoveAdjacentToValue_1.getAndRemoveAdjacentToValue({ value: 19, offset: 0, howMany: 1 }, arrayToModify);
+    result = index_1.getAndRemoveAdjacentToValue({ value: 19, offset: 0, howMany: 1 }, arrayToModify);
 }
 catch (e) {
     errorTriggered = true;
