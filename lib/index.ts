@@ -1,17 +1,15 @@
+import { errorIfIndexIsNegative } from 'error-if-index-is-negative';
+import { errorIfIndexNotValidAfterOffsetWasAdded }
+	from 'error-if-index-not-valid-after-offset-was-added';
 import { errorIfNotInteger } from 'basic-data-handling/errorIfNotInteger';
+import { getAndRemoveAdjacentAt } from '@writetome51/array-get-and-remove-adjacent-at';
+import { getFirstIndexOf } from '@writetome51/array-get-indexes';
 import { IAdjacentToValueInfo }
 	from '@writetome51/adjacent-to-value-info-interface/IAdjacentToValueInfo';
-import { getFirstIndexOf } from '@writetome51/array-get-indexes';
-import { getAndRemoveAdjacentAt } from '@writetome51/array-get-and-remove-adjacent-at';
-import { ifIndexNotNegative_getActionResult }
-	from '@writetome51/array-and-index-validation/ifIndexNotNegative_getActionResult';
-import { errorIfIndexNotValidAfterOffsetWasAdded }
-	from '@writetome51/array-and-index-validation/errorIf/errorIfIndexNotValidAfterOffsetWasAdded';
 
 
 // Removes and returns adjacent items from passed array, starting with, or
 // close to, info.value.
-// Check interface IAdjacentToValueInfo for more info on how to use this.
 //
 // Example of usage:
 //
@@ -22,12 +20,12 @@ import { errorIfIndexNotValidAfterOffsetWasAdded }
 
 
 export function getAndRemoveAdjacentToValue(info: IAdjacentToValueInfo, array): any[] {
-	let index = getFirstIndexOf(info.value, array);
-	errorIfNotInteger(info.offset);
-	return ifIndexNotNegative_getActionResult(index, () => {
-		index += info.offset;
+	let index = getFirstIndexOf(info.value, array); // validates info.value and array.
+	errorIfIndexIsNegative(index); // means value wasn't found.
 
-		errorIfIndexNotValidAfterOffsetWasAdded(index, array);
-		return getAndRemoveAdjacentAt(index, info.howMany, array);
-	});
+	errorIfNotInteger(info.offset);
+	index += info.offset;
+	errorIfIndexNotValidAfterOffsetWasAdded(index, array.length);
+
+	return getAndRemoveAdjacentAt(index, info.howMany, array);
 }
