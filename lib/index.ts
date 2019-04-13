@@ -1,7 +1,7 @@
 import { errorIfIndexIsNegative } from 'error-if-index-is-negative';
 import { errorIfIndexNotValidAfterOffsetWasAdded }
 	from 'error-if-index-not-valid-after-offset-was-added';
-import { errorIfNotInteger } from 'basic-data-handling/errorIfNotInteger';
+import { errorIfNotInteger } from 'error-if-not-integer';
 import { getAndRemoveAdjacentAt } from '@writetome51/array-get-and-remove-adjacent-at';
 import { getFirstIndexOf } from '@writetome51/array-get-indexes';
 import { IAdjacentToValueInfo }

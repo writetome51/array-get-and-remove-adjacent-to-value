@@ -12,13 +12,13 @@ let result = getAndRemoveAdjacentToValue({
 if (result.length === 3 && result[0] === 7 && result[2] === 11) {
 	console.log('test 1 passed');
 }
-else console.log('test 1 failed');
+else console.log('test 1 FAILED');
 
 
 if (arrayToModify.length === 6 && arrayToModify[3] === 13 && arrayToModify[5] === 17) {
 	console.log('test 2 passed');
 }
-else console.log('test 2 failed');
+else console.log('test 2 FAILED');
 
 
 arrayToModify = [1, 3, 5, 7, 9, 11, 13, 15, 17];
@@ -26,7 +26,7 @@ result = getAndRemoveAdjacentToValue({value: 13, offset: -2, howMany: 4}, arrayT
 
 if (result.length === 4 && result[0] === 9 && result[3] === 15)
 	console.log('test 3 passed');
-else console.log('test 3 failed');
+else console.log('test 3 FAILED');
 
 
 if (arrayToModify.length === 5 && arrayToModify[0] === 1 && arrayToModify[4] === 17)
@@ -44,7 +44,7 @@ catch (e) {
 	errorTriggered = true;
 }
 if (errorTriggered) console.log('test 5 passed');
-else console.log('test 5 failed');
+else console.log('test 5 FAILED');
 
 
 errorTriggered = false;
@@ -59,7 +59,7 @@ catch (e) {
 	errorTriggered = true;
 }
 if (errorTriggered) console.log('test 6 passed');
-else console.log('test 6 failed');
+else console.log('test 6 FAILED');
 
 
 errorTriggered = false;
@@ -73,7 +73,7 @@ catch (e) {
 	errorTriggered = true;
 }
 if (errorTriggered) console.log('test 7 passed');
-else console.log('test 7 failed');
+else console.log('test 7 FAILED');
 
 
 errorTriggered = false;
@@ -87,4 +87,20 @@ catch (e) {
 	errorTriggered = true;
 }
 if (errorTriggered) console.log('test 8 passed');
-else console.log('test 8 failed');
+else console.log('test 8 FAILED');
+
+
+arrayToModify = [1, 3, 5, 7, 9, 11, 13, 15, 17];
+errorTriggered = false;
+try{
+	result = getAndRemoveAdjacentToValue(
+		{value: 13, offset: '', howMany: 1},
+		arrayToModify
+	);
+}
+catch (e) {
+	errorTriggered = true;
+	console.log(e.message);
+}
+if (errorTriggered) console.log('test 9 passed');
+else console.log('test 9 FAILED');
