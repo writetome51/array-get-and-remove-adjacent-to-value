@@ -20,6 +20,7 @@ import { IAdjacentToValueInfo }
 
 
 export function getAndRemoveAdjacentToValue(info: IAdjacentToValueInfo, array): any[] {
+
 	let index = getFirstIndexOf(info.value, array); // validates info.value and array.
 	errorIfIndexIsNegative(index); // means value wasn't found.
 

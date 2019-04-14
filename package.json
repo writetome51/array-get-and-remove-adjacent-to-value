@@ -1,7 +1,7 @@
 {
   "name": "@writetome51/array-get-and-remove-adjacent-to-value",
   "version": "1.0.8",
-  "description": "Function that removes and returns section of the array",
+  "description": "Function that removes and returns section of the array, starting with, or close to, a particular value",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
